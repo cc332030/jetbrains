@@ -1,0 +1,4 @@
+
+-Xmx4096m
+
+-Dfile.encoding=utf-8

@@ -1,0 +1,17 @@
+
+= idea
+
+== 数据目录相对路径
+
+JAVA_TOOL_OPTIONS
+[source,shell script]
+----
+set IDEA_USER_HOME=../../../data
+
+-Dfile.encoding=utf-8 -Xmx4096m -Didea.config.path=%IDEA_USER_HOME%/config -Didea.system.path=%IDEA_USER_HOME%/system -Didea.plugins.path=%IDEA_USER_HOME%/plugins -Didea.log.path=%IDEA_USER_HOME%/log
+
+----
+
+== git 加速
+
+删除 runnerw.exe、runnerw64.exe
