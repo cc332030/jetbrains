@@ -1,0 +1,12 @@
+
+= toolbox闪退
+
+%userprofile%\AppData\Local\JetBrains\Toolbox\.settings.json
+[source,json]
+----
+{
+  "internal": {
+      "graphics_api": "Software"
+  }
+}
+----
