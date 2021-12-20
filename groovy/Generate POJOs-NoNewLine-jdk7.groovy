@@ -9,14 +9,14 @@ import com.intellij.database.util.DasUtil
  *   FILES       files helper
  */
 
-packageName = "c332030.entity;"
+packageName = "com.c332030.entity;"
 typeMapping = [
   (~/(?i)bit/)                      : "Boolean",
   (~/(?i)tinyint/)                  : "Short",
   (~/(?i)smallint/)                 : "Short",
   (~/(?i)bigint/)                   : "Long",
   (~/(?i)int/)                      : "Integer",
-  (~/(?i)float|double|decimal|real/): "Double",
+  (~/(?i)float|double|decimal|real/): "BigDecimal",
   (~/(?i)datetime|timestamp/)       : "Date",
   (~/(?i)date/)                     : "Date",
   (~/(?i)time/)                     : "Date",
