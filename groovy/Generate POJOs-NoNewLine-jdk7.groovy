@@ -36,6 +36,7 @@ def generate(table, dir) {
   out ->
     out.println "package $packageName"
     out.println ""
+    out.println "import java.math.BigDecimal;"
     out.println "import java.util.Date;"
     out.println ""
     out.println "/**"
