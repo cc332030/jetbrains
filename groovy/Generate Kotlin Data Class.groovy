@@ -14,7 +14,7 @@ typeMapping = [
   (~/(?i)tinyint/)                  : "Short",
   (~/(?i)smallint/)                 : "Short",
   (~/(?i)bigint/)                   : "Long",
-  (~/(?i)int/)                      : "Integer",
+  (~/(?i)int/)                      : "Int",
   (~/(?i)float|double|decimal|real/): "BigDecimal",
   (~/(?i)datetime|timestamp/)       : "Instant",
   (~/(?i)date/)                     : "Instant",
