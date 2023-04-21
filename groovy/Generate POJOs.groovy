@@ -31,10 +31,14 @@ def generate(table, dir) {
   def className = javaName(table.getName(), true)
   def fields = calcFields(table)
 //  new File(dir, className + ".java").withPrintWriter { out -> generate(out, className, fields).getBytes('UTF-8'), }
-  new File(dir, className + ".java").withPrintWriter('UTF-8') { // 使用 UTF-8 格式写入文件，默认是 GBK
+
+  File sql = new File(dir, className + ".java")
+  sql.delete()
+
+  sql.withPrintWriter('UTF-8') { // 使用 UTF-8 格式写入文件，默认是 GBK
 //    out -> generate(out, className, fields)
   out ->
-    out.println "package $packageName\n"
+    out.println "package $packageName"
     out.println ""
     out.println "import lombok.Data;"
     out.println ""
@@ -54,18 +58,6 @@ def generate(table, dir) {
       out.println "     */"
       out.println "    private ${it.type} ${it.name};\n"
     }
-
-//  不生成 get set
-//  fields.each() {
-//    out.println "\n"
-//    out.println "  public ${it.type} get${it.name.capitalize()}() {\n"
-//    out.println "    return ${it.name};\n"
-//    out.println "  }\n"
-//    out.println "\n"
-//    out.println "  public void set${it.name.capitalize()}(${it.type} ${it.name}) {\n"
-//    out.println "    this.${it.name} = ${it.name};\n"
-//    out.println "  }\n"
-//  }
 
     out.println "\n}"
 
