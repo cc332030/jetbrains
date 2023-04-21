@@ -59,7 +59,7 @@ def generate(table, dir) {
       out.println "    private ${it.type} ${it.name};\n"
     }
 
-    out.println "\n}"
+    out.println "}"
 
   }
 }
