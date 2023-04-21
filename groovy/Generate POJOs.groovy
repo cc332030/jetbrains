@@ -17,9 +17,9 @@ typeMapping = [
   (~/(?i)bigint/)                   : "Long",
   (~/(?i)int/)                      : "Integer",
   (~/(?i)float|double|decimal|real/): "BigDecimal",
-  (~/(?i)datetime|timestamp/)       : "LocalDateTime",
-  (~/(?i)date/)                     : "LocalDate",
-  (~/(?i)time/)                     : "LocalTime",
+  (~/(?i)datetime|timestamp/)       : "Instant",
+  (~/(?i)date/)                     : "Instant",
+  (~/(?i)time/)                     : "Instant",
   (~/(?i)/)                         : "String"
 ]
 
@@ -35,6 +35,11 @@ def generate(table, dir) {
 //    out -> generate(out, className, fields)
   out ->
     out.println "package $packageName\n"
+    out.println ""
+    out.println "import lombok.Data;"
+    out.println ""
+    out.println "import java.time.Instant;"
+    out.println ""
     out.println "/**"
     out.println " * Table: $table.name $table.comment"
     out.println " */"
