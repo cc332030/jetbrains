@@ -8,6 +8,7 @@ import com.intellij.database.util.DasUtil
  *   PROJECT     project
  *   FILES       files helper
  */
+packageName = "com.c332030.entity"
 typeMapping = [
         (~/(?i)bit/)                      : "Boolean",
         (~/(?i)tinyint/)                  : "Short",

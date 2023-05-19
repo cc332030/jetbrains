@@ -9,17 +9,18 @@ import com.intellij.database.util.DasUtil
  *   FILES       files helper
  */
 
+packageName = "com.c332030.entity"
 typeMapping = [
-  (~/(?i)bit/)                      : "Boolean",
-  (~/(?i)tinyint/)                  : "Short",
-  (~/(?i)smallint/)                 : "Short",
-  (~/(?i)bigint/)                   : "Long",
-  (~/(?i)int/)                      : "Integer",
-  (~/(?i)float|double|decimal|real/): "BigDecimal",
-  (~/(?i)datetime|timestamp/)       : "Instant",
-  (~/(?i)date/)                     : "Instant",
-  (~/(?i)time/)                     : "Instant",
-  (~/(?i)/)                         : "String"
+        (~/(?i)bit/)                      : "Boolean",
+        (~/(?i)tinyint/)                  : "Short",
+        (~/(?i)smallint/)                 : "Short",
+        (~/(?i)bigint/)                   : "Long",
+        (~/(?i)int/)                      : "Integer",
+        (~/(?i)float|double|decimal|real/): "BigDecimal",
+        (~/(?i)datetime|timestamp/)       : "Instant",
+        (~/(?i)date/)                     : "Instant",
+        (~/(?i)time/)                     : "Instant",
+        (~/(?i)/)                         : "String"
 ]
 
 FILES.chooseDirectoryAndSave("Choose directory", "Choose where to store generated files") { dir ->
@@ -68,7 +69,7 @@ def generate(table, dir) {
       out.println "    private ${it.type} ${it.name};\n"
     }
 
-    out.println "}"
+    out.println "\n}"
 
   }
 }
@@ -78,20 +79,20 @@ def calcFields(table) {
     def spec = Case.LOWER.apply(col.getDataType().getSpecification())
     def typeStr = typeMapping.find { p, t -> p.matcher(spec).find() }.value
     fields += [
-      [
-        name : javaName(col.getName(), false),
-        type : typeStr,
-        comment: col.getComment(), // 获取注释
-        annos: '',
-      ]
+            [
+                    name : javaName(col.getName(), false),
+                    type : typeStr,
+                    comment: col.getComment(), // 获取注释
+                    annos: '',
+            ]
     ]
   }
 }
 
 def javaName(str, capitalize) {
   def s = com.intellij.psi.codeStyle.NameUtil.splitNameIntoWords(str)
-    .collect { Case.LOWER.apply(it).capitalize() }
-    .join("")
-    .replaceAll(/[^\p{javaJavaIdentifierPart}[_]]/, "_")
+          .collect { Case.LOWER.apply(it).capitalize() }
+          .join("")
+          .replaceAll(/[^\p{javaJavaIdentifierPart}[_]]/, "_")
   capitalize || s.length() == 1? s : Case.LOWER.apply(s[0]) + s[1..-1]
 }
