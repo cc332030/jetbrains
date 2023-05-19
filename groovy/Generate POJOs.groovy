@@ -9,7 +9,6 @@ import com.intellij.database.util.DasUtil
  *   FILES       files helper
  */
 
-packageName = "c332030.entity;"
 typeMapping = [
   (~/(?i)bit/)                      : "Boolean",
   (~/(?i)tinyint/)                  : "Short",
@@ -38,7 +37,17 @@ def generate(table, dir) {
   sql.withPrintWriter('UTF-8') { // 使用 UTF-8 格式写入文件，默认是 GBK
 //    out -> generate(out, className, fields)
   out ->
-    out.println "package $packageName"
+
+    def dirPath = dir.path
+    def sourcePath = "src\\main\\java"
+    def sourcePathIndex = dirPath.indexOf(sourcePath)
+    def packagePath = packageName
+    if(sourcePathIndex > 0) {
+      def packageFilePath = dirPath.substring(sourcePathIndex + sourcePath.length() + 1)
+      packagePath = packageFilePath.replace("\\", ".")
+    }
+
+    out.println "package $packagePath;"
     out.println ""
     out.println "import lombok.Data;"
     out.println ""
