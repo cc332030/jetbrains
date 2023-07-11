@@ -58,15 +58,16 @@ def generate(table, dir) {
     out.println " * Table: $table.name $table.comment"
     out.println " */"
     out.println "@Data"
-    out.println "public class $className {\n"
+    out.println "public class $className {"
     fields.each() {
       if (it.annos != "") {
         out.println "  ${it.annos}"
       }
+      out.println ""
       out.println "    /**"
       out.println "     * ${it.comment}"
       out.println "     */"
-      out.println "    private ${it.type} ${it.name};\n"
+      out.println "    private ${it.type} ${it.name};"
     }
 
     out.println "\n}"
