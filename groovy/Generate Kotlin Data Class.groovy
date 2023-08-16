@@ -34,7 +34,7 @@ def generate(table, dir) {
     out ->
 
       def dirPath = dir.path
-      def sourcePath = "src\\main\\kotlin"
+      def sourcePath = "kotlin"
       def sourcePathIndex = dirPath.indexOf(sourcePath)
       def packagePath = packageName
       if(sourcePathIndex > 0) {

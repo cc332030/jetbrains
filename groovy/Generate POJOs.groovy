@@ -40,7 +40,7 @@ def generate(table, dir) {
   out ->
 
     def dirPath = dir.path
-    def sourcePath = "src\\main\\java"
+    def sourcePath = "java"
     def sourcePathIndex = dirPath.indexOf(sourcePath)
     def packagePath = packageName
     if(sourcePathIndex > 0) {
