@@ -23,67 +23,64 @@ typeMapping = [
 ]
 
 FILES.chooseDirectoryAndSave("Choose directory", "Choose where to store generated files") { dir ->
-  SELECTION.filter { it instanceof DasTable }.each { generate(it, dir) }
+    SELECTION.filter { it instanceof DasTable }.each { generate(it, dir) }
 }
 
 def generate(table, dir) {
-  def className = javaName(table.getName(), true)
-  def fields = calcFields(table)
-  new File(dir, className + ".kt").withPrintWriter("UTF-8") {
-      // 使用 UTF-8 格式写入文件，默认是 GBK
-    out ->
+    def className = javaName(table.getName(), true)
+    def fields = calcFields(table)
+    new File(dir, className + ".kt").withPrintWriter("UTF-8") {
+            // 使用 UTF-8 格式写入文件，默认是 GBK
+        out ->
 
-      def dirPath = dir.path
-      def sourcePath = "kotlin"
-      def sourcePathIndex = dirPath.indexOf(sourcePath)
-      def packagePath = packageName
-      if(sourcePathIndex > 0) {
-        def packageFilePath = dirPath.substring(sourcePathIndex + sourcePath.length() + 1)
-        packagePath = packageFilePath.replace("\\", ".")
-      }
+            def dirPath = dir.path
+            def sourcePath = "kotlin"
+            def sourcePathIndex = dirPath.indexOf(sourcePath)
+            def packagePath = packageName
+            if (sourcePathIndex > 0) {
+                def packageFilePath = dirPath.substring(sourcePathIndex + sourcePath.length() + 1)
+                packagePath = packageFilePath.replace("\\", ".")
+            }
 
-      out.println "package $packagePath"
-      out.println ""
-      out.println "import java.math.BigDecimal"
-      out.println "import java.util.Date"
-      out.println "import java.time.Instant"
-      out.println ""
-      out.println "/**"
-      out.println " * Table: $table.name $table.comment"
-      out.println " */"
-      out.println "data class $className (\n"
-      fields.each() {
-        if (it.annos != "") {
-          out.println "  ${it.annos}"
-        }
-        out.println "    /**"
-        out.println "     * ${it.comment}"
-        out.println "     */"
-        out.println "    val ${it.name}: ${it.type},\n"
-      }
-      out.println ")"
-  }
+            out.print "package $packagePath\n\n"
+            out.print "import java.math.BigDecimal\n"
+            out.print "import java.time.Instant\n\n"
+            out.print "/**\n"
+            out.print " * Table: $table.name $table.comment\n"
+            out.print " */\n"
+            out.print "data class $className (\n"
+            fields.each() {
+                if (it.annos != "") {
+                    out.print "  ${it.annos}\n"
+                }
+                out.print "\n    /**\n"
+                out.print "     * ${it.comment}\n"
+                out.print "     */\n"
+                out.print "    val ${it.name}: ${it.type},\n"
+            }
+            out.print "\n)\n"
+    }
 }
 
 def calcFields(table) {
-  DasUtil.getColumns(table).reduce([]) { fields, col ->
-    def spec = Case.LOWER.apply(col.getDataType().getSpecification())
-    def typeStr = typeMapping.find { p, t -> p.matcher(spec).find() }.value
-    fields += [
-            [
-                    name   : javaName(col.getName(), false),
-                    type   : typeStr,
-                    comment: col.getComment(), // 获取注释
-                    annos  : "",
-            ]
-    ]
-  }
+    DasUtil.getColumns(table).reduce([]) { fields, col ->
+        def spec = Case.LOWER.apply(col.getDataType().getSpecification())
+        def typeStr = typeMapping.find { p, t -> p.matcher(spec).find() }.value
+        fields += [
+                [
+                        name   : javaName(col.getName(), false),
+                        type   : typeStr,
+                        comment: col.getComment(), // 获取注释
+                        annos  : "",
+                ]
+        ]
+    }
 }
 
 def javaName(str, capitalize) {
-  def s = com.intellij.psi.codeStyle.NameUtil.splitNameIntoWords(str)
-          .collect { Case.LOWER.apply(it).capitalize() }
-          .join("")
-          .replaceAll(/[^\p{javaJavaIdentifierPart}[_]]/, "_")
-  capitalize || s.length() == 1 ? s : Case.LOWER.apply(s[0]) + s[1..-1]
+    def s = com.intellij.psi.codeStyle.NameUtil.splitNameIntoWords(str)
+            .collect { Case.LOWER.apply(it).capitalize() }
+            .join("")
+            .replaceAll(/[^\p{javaJavaIdentifierPart}[_]]/, "_")
+    capitalize || s.length() == 1 ? s : Case.LOWER.apply(s[0]) + s[1..-1]
 }
