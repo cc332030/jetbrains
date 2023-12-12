@@ -27,7 +27,7 @@ FILES.chooseDirectoryAndSave("Choose directory", "Choose where to store generate
 }
 
 def generate(table, dir) {
-    def className = javaName(table.getName(), true)
+    def className = javaName(table.getName(), true) + "Do"
     def fields = calcFields(table)
     new File(dir, className + ".kt").withPrintWriter("UTF-8") {
             // 使用 UTF-8 格式写入文件，默认是 GBK
