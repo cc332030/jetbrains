@@ -50,12 +50,19 @@ def generate(table, dir) {
             }
 
             out.print "package $packagePath;\n\n"
+
+            out.print "import com.baomidou.mybatisplus.annotation.TableId;\n"
+            out.print "import com.baomidou.mybatisplus.annotation.IdType;\n"
+            out.print "import com.baomidou.mybatisplus.annotation.TableName;\n\n"
+
             out.print "import lombok.Data;\n\n"
             out.print "import java.time.Instant;\n\n"
+
             out.print "/**\n"
             out.print " * Table: $table.name $table.comment\n"
             out.print " */\n"
             out.print "@Data\n"
+            out.print "@TableName(\"$table.name\")\n"
             out.print "public class $className {\n"
             fields.each() {
                 if (it.annos != "") {
@@ -64,6 +71,9 @@ def generate(table, dir) {
                 out.print "\n    /**\n"
                 out.print "     * ${it.comment}\n"
                 out.print "     */\n"
+                if('id' == it.name) {
+                    out.print "    @TableId(type = IdType.AUTO)\n"
+                }
                 out.print "    private ${it.type} ${it.name};\n"
             }
 
