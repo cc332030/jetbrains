@@ -28,7 +28,7 @@ FILES.chooseDirectoryAndSave("Choose directory", "Choose where to store generate
 }
 
 def generate(table, dir) {
-    def className = javaName(table.getName(), true)
+    def className = javaName(table.getName(), true) + "DO"
     def fields = calcFields(table)
 //  new File(dir, className + ".java").withPrintWriter { out -> generate(out, className, fields).getBytes('UTF-8'), }
 
