@@ -43,11 +43,15 @@ def generate(table, dir) {
             }
 
             out.print "package $packagePath\n\n"
+
+            out.print "import com.baomidou.mybatisplus.annotation.TableName\n\n"
+
             out.print "import java.math.BigDecimal\n"
             out.print "import java.time.Instant\n\n"
             out.print "/**\n"
             out.print " * Table: $table.name $table.comment\n"
             out.print " */\n"
+            out.print "@TableName(\"$table.name\")\n"
             out.print "data class $className (\n"
             fields.each() {
                 if (it.annos != "") {
