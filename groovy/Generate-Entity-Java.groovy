@@ -55,7 +55,11 @@ def generate(table, dir) {
             out.print "import com.baomidou.mybatisplus.annotation.IdType;\n"
             out.print "import com.baomidou.mybatisplus.annotation.TableName;\n\n"
 
+            out.print "import lombok.AllArgsConstructor;\n\n"
+            out.print "import lombok.Builder;\n\n"
             out.print "import lombok.Data;\n\n"
+            out.print "import lombok.NoArgsConstructor;\n\n\n"
+
             out.print "import java.math.BigDecimal;\n\n"
             out.print "import java.time.Instant;\n\n"
 
@@ -63,6 +67,9 @@ def generate(table, dir) {
             out.print " * Table: $table.name $table.comment\n"
             out.print " */\n"
             out.print "@Data\n"
+            out.print "@Builder\n"
+            out.print "@NoArgsConstructor\n"
+            out.print "@AllArgsConstructor\n"
             out.print "@TableName(\"$table.name\")\n"
             out.print "public class $className {\n"
             fields.each() {
