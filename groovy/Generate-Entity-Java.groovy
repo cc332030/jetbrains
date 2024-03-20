@@ -56,6 +56,7 @@ def generate(table, dir) {
             out.print "import com.baomidou.mybatisplus.annotation.TableName;\n\n"
 
             out.print "import lombok.Data;\n\n"
+            out.print "import java.math.BigDecimal;\n\n"
             out.print "import java.time.Instant;\n\n"
 
             out.print "/**\n"
