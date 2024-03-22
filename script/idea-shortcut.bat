@@ -7,7 +7,10 @@
     Exit /b
 )
 
-set exePath=%~dp0app\bin\idea64.exe
+echo.
+set /p idea_home=请输入 idea 地址：
+
+set exePath=%idea_home%\bin\idea64.exe
 
 echo.
 SET /P ST=输入 1 添加右键菜单，输入 2 删除右键菜单：
