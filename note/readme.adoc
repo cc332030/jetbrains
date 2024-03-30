@@ -1,0 +1,7 @@
+
+= note
+
+[source,text]
+----
+\Users\Administrator\AppData\Roaming\JetBrains\IntelliJIdea2023.3\ssl\cacerts 中，默认密码为 changeit
+----
