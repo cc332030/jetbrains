@@ -54,9 +54,9 @@ def generate(table, dir) {
             out.print "import com.baomidou.mybatisplus.annotation.TableName;\n\n"
 
             out.print "import lombok.AllArgsConstructor;\n"
-            out.print "import lombok.Builder;\n"
             out.print "import lombok.Data;\n"
-            out.print "import lombok.NoArgsConstructor;\n\n"
+            out.print "import lombok.NoArgsConstructor;\n"
+            out.print "import lombok.experimental.SuperBuilder;\n\n"
 
             out.print "import java.math.BigDecimal;\n\n"
             out.print "import java.time.Instant;\n\n"
@@ -65,7 +65,7 @@ def generate(table, dir) {
             out.print " * Table: $table.name $table.comment\n"
             out.print " */\n"
             out.print "@Data\n"
-            out.print "@Builder\n"
+            out.print "@SuperBuilder\n"
             out.print "@NoArgsConstructor\n"
             out.print "@AllArgsConstructor\n"
             out.print "@TableName(\"$table.name\")\n"
