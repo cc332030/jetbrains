@@ -77,7 +77,7 @@ def generate(table, dir) {
                 out.print "\n    /**\n"
                 out.print "     * ${it.comment}\n"
                 out.print "     */\n"
-                out.print "    private ${it.type} ${it.name};\n"
+                out.print "    ${it.type} ${it.name};\n"
             }
 
             out.print "\n}\n"
