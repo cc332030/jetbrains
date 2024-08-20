@@ -12,14 +12,14 @@ import com.intellij.database.util.DasUtil
 packageName = "com.c332030.entity"
 typeMapping = [
         (~/(?i)bit/)                      : "Boolean",
-        (~/(?i)tinyint/)                  : "Short",
-        (~/(?i)smallint/)                 : "Short",
+        (~/(?i)tinyint/)                  : "Boolean",
+        (~/(?i)smallint/)                 : "Integer",
         (~/(?i)bigint/)                   : "Long",
         (~/(?i)int/)                      : "Integer",
         (~/(?i)float|double|decimal|real/): "BigDecimal",
         (~/(?i)datetime|timestamp/)       : "Instant",
-        (~/(?i)date/)                     : "Instant",
-        (~/(?i)time/)                     : "Instant",
+        (~/(?i)date/)                     : "LocalDate",
+        (~/(?i)time/)                     : "LocalTime",
         (~/(?i)/)                         : "String"
 ]
 
@@ -49,17 +49,24 @@ def generate(table, dir) {
                 packagePath = packageFilePath.replace("\\", ".")
             }
 
-            out.print "package $packagePath;\n\n"
+            out.print "package $packagePath;\n"
+            out.print "\n"
 
-            out.print "import com.baomidou.mybatisplus.annotation.TableName;\n\n"
+            out.print "import com.baomidou.mybatisplus.annotation.TableName;\n"
+            out.print "\n"
 
             out.print "import lombok.AllArgsConstructor;\n"
             out.print "import lombok.Data;\n"
             out.print "import lombok.NoArgsConstructor;\n"
-            out.print "import lombok.experimental.SuperBuilder;\n\n"
+            out.print "import lombok.experimental.SuperBuilder;\n"
+            out.print "\n"
 
-            out.print "import java.math.BigDecimal;\n\n"
-            out.print "import java.time.Instant;\n\n"
+            out.print "import java.math.BigDecimal;\n"
+            out.print "\n"
+            out.print "import java.time.Instant;\n"
+            out.print "import java.time.LocalDate;\n"
+            out.print "import java.time.LocalTime;\n"
+            out.print "\n"
 
             out.print "/**\n"
             out.print " * Table: $table.name $table.comment\n"
