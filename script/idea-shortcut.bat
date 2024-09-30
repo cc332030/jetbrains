@@ -18,12 +18,12 @@ if /I "%ST%"=="1" goto Add
 if /I "%ST%"=="2" goto Remove
 :Add
 reg add "HKEY_CLASSES_ROOT\*\shell\IDEA"         /t REG_SZ /v "" /d "IDEA"   /f
-reg add "HKEY_CLASSES_ROOT\*\shell\IDEA"         /t REG_EXPAND_SZ /v "Icon" /d "%exePath%" /f
-reg add "HKEY_CLASSES_ROOT\*\shell\IDEA\command" /t REG_SZ /v "" /d "%exePath% \"%%1\"" /f
+reg add "HKEY_CLASSES_ROOT\*\shell\IDEA"         /t REG_EXPAND_SZ /v "Icon" /d "\"%exePath%"\" /f
+reg add "HKEY_CLASSES_ROOT\*\shell\IDEA\command" /t REG_SZ /v "" /d "\"%exePath%\" \"%%1\"" /f
 
 reg add "HKEY_CLASSES_ROOT\Directory\shell\IDEA"         /t REG_SZ /v "" /d "IDEA"   /f
-reg add "HKEY_CLASSES_ROOT\Directory\shell\IDEA"         /t REG_EXPAND_SZ /v "Icon" /d "%exePath%" /f
-reg add "HKEY_CLASSES_ROOT\Directory\shell\IDEA\command" /t REG_SZ /v "" /d "%exePath% \"%%1\"" /f
+reg add "HKEY_CLASSES_ROOT\Directory\shell\IDEA"         /t REG_EXPAND_SZ /v "Icon" /d "\"%exePath%"\" /f
+reg add "HKEY_CLASSES_ROOT\Directory\shell\IDEA\command" /t REG_SZ /v "" /d "\"%exePath%\" \"%%1\"" /f
 
 exit
 :Remove
