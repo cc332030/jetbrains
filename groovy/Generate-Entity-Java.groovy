@@ -69,7 +69,7 @@ def generate(table, dir) {
             out.print "\n"
 
             out.print "/**\n"
-            out.print " * Table: $table.name $table.comment\n"
+            out.print " * $table.comment\n"
             out.print " */\n"
             out.print "@Data\n"
             out.print "@SuperBuilder\n"
