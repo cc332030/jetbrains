@@ -40,21 +40,39 @@ rd /s /q ^
   compiler ^
   compile-server ^
   conversion ^
+  captureAgent ^
+  composer_packages ^
   database-log ^
   event-log-data ^
   external_build_system ^
+  editor ^
   frameworks ^
+  fileHistory ^
+  full-line ^
+  global-model-cache ^
+  gitlab-ci-aid-cache ^
+  grape ^
+  grazie ^
+  grpc ^
   index ^
+  jcef_cache ^
+  javascript ^
+  kubernetes ^
   LocalHistory ^
   Maven ^
+  openapi ^
   projects ^
   projectModelCache ^
   recommenders-java ^
   stat ^
+  sdk_index ^
+  semantic-search ^
+  splash ^
   terminal ^
   testHistory ^
   tmp ^
   tomcat ^
+  typescript-diag-message-parser ^
   vcs ^
   vcsCache ^
   vcs-log ^
@@ -64,3 +82,5 @@ rd /s /q ^
 del /f /s /q ^
   .pid ^
   .home
+
+pause
