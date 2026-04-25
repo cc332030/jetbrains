@@ -5,13 +5,16 @@
 ----
 
 # 下载
+powershell
+Invoke-WebRequest -Uri 'https://ckey.run/ja-netfilter' -OutFile 'ja-netfilter.zip'
+Invoke-WebRequest -Uri 'https://ckey.run' -OutFile 'ckey.run.ps1'
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\ckey.run.ps1
+
 powershell -Command "Invoke-WebRequest -Uri 'https://ckey.run/ja-netfilter' -OutFile 'ja-netfilter.zip'"
 powershell -Command "Invoke-WebRequest -Uri 'https://ckey.run' -OutFile 'ckey.run.ps1'"
 powershell -ExecutionPolicy Bypass -File ".\ckey.run.ps1"
-
-# 运行执行 ps1
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\ckey.run.ps1
 
 ----
 
