@@ -5,6 +5,7 @@
 ----
 
 # 下载
+powershell -Command "Invoke-WebRequest -Uri 'https://ckey.run/ja-netfilter' -OutFile 'ja-netfilter.zip'"
 powershell -Command "Invoke-WebRequest -Uri 'https://ckey.run' -OutFile 'ckey.run.ps1'"
 powershell -ExecutionPolicy Bypass -File ".\ckey.run.ps1"
 
