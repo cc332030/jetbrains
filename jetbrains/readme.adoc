@@ -3,6 +3,20 @@
 
 [source,shell]
 ----
+
+# 下载
+powershell -Command "Invoke-WebRequest -Uri 'https://ckey.run' -OutFile 'ckey.run.ps1'"
+powershell -ExecutionPolicy Bypass -File ".\ckey.run.ps1"
+
+# 运行执行 ps1
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\ckey.run.ps1
+
+----
+
+[source,shell]
+----
+
 irm ckey.run | iex
 
 irm ckey.run/debug | iex
