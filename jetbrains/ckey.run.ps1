@@ -25,171 +25,171 @@ function Get-i18nString
 
     $i18n = @{
         "processing_env_vars" = @{
-            "zh" = "´¦Àí {0} »·¾³±äÁ¿"
+            "zh" = "å¤„ç† {0} ç¯å¢ƒå˜é‡"
             "en" = "Processing {0} environment variables"
         }
         "checking_env" = @{
-            "zh" = "¼ì²é [{0}]: {1} = '{2}'"
+            "zh" = "æ£€æŸ¥ [{0}]: {1} = '{2}'"
             "en" = "Checking [{0}]: {1} = '{2}'"
         }
         "deleting_env" = @{
-            "zh" = "É¾³ı [{0}]: {1}"
+            "zh" = "åˆ é™¤ [{0}]: {1}"
             "en" = "Deleting [{0}]: {1}"
         }
         "welcome_msg" = @{
-            "zh" = "`n»¶Ó­Ê¹ÓÃ JetBrains ¼¤»î¹¤¾ß | CodeKey Run"
+            "zh" = "`næ¬¢è¿ä½¿ç”¨ JetBrains æ¿€æ´»å·¥å…· | CodeKey Run"
             "en" = "`nWelcome to JetBrains Activation Tool | CodeKey Run"
         }
         "script_date" = @{
-            "zh" = "`n½Å±¾ÈÕÆÚ£º2026-1-28"
+            "zh" = "`nè„šæœ¬æ—¥æœŸï¼š2026-1-28"
             "en" = "`nScript Date: 2026-1-28"
         }
         "warning_msg" = @{
-            "zh" = "`n×¢Òâ£º´Ë½Å±¾½«Ç¿ÖÆÖØĞÂ¼¤»îËùÓĞ²úÆ·£¡£¡£¡"
+            "zh" = "`næ³¨æ„ï¼šæ­¤è„šæœ¬å°†å¼ºåˆ¶é‡æ–°æ¿€æ´»æ‰€æœ‰äº§å“ï¼ï¼ï¼"
             "en" = "`nWarning: This script will forcibly re-activate all products!!!"
         }
         "admin_request" = @{
-            "zh" = "¼´½«ÉêÇë¹ÜÀíÔ±È¨ÏŞÔËĞĞ£¬°´»Ø³µ¼ÌĞø..."
+            "zh" = "å³å°†ç”³è¯·ç®¡ç†å‘˜æƒé™è¿è¡Œï¼ŒæŒ‰å›è½¦ç»§ç»­..."
             "en" = "Administrator privileges will be requested to run, press Enter to continue..."
         }
         "close_products" = @{
-            "zh" = "`nÇëÈ·±£ËùÓĞ JetBrains Èí¼şÒÑ¹Ø±Õ£¬°´»Ø³µ¼ÌĞø..."
+            "zh" = "`nè¯·ç¡®ä¿æ‰€æœ‰ JetBrains è½¯ä»¶å·²å…³é—­ï¼ŒæŒ‰å›è½¦ç»§ç»­..."
             "en" = "`nPlease make sure all JetBrains software is closed, press Enter to continue..."
         }
         "processing" = @{
-            "zh" = "`n´¦ÀíÖĞ£¬ÇëÄÍĞÄµÈ´ı..."
+            "zh" = "`nå¤„ç†ä¸­ï¼Œè¯·è€å¿ƒç­‰å¾…..."
             "en" = "`nProcessing, please wait patiently..."
         }
         "processing_configs" = @{
-            "zh" = "`n¿ªÊ¼´¦ÀíÅäÖÃ..."
+            "zh" = "`nå¼€å§‹å¤„ç†é…ç½®..."
             "en" = "`nStarting to process configurations..."
         }
         "not_found_dir" = @{
-            "zh" = "Î´ÕÒµ½ {0} Ä¿Â¼!"
+            "zh" = "æœªæ‰¾åˆ° {0} ç›®å½•!"
             "en" = "Directory not found: {0}!"
         }
         "processing_product" = @{
-            "zh" = "`n´¦Àí: {0}"
+            "zh" = "`nå¤„ç†: {0}"
             "en" = "`nProcessing: {0}"
         }
         "not_found_home" = @{
-            "zh" = "Î´ÕÒµ½ .home ÎÄ¼ş: {0}"
+            "zh" = "æœªæ‰¾åˆ° .home æ–‡ä»¶: {0}"
             "en" = ".home file not found: {0}"
         }
         "path_not_exist" = @{
-            "zh" = "Â·¾¶²»´æÔÚ: {0}"
+            "zh" = "è·¯å¾„ä¸å­˜åœ¨: {0}"
             "en" = "Path does not exist: {0}"
         }
         "not_found_bin" = @{
-            "zh" = "Î´ÕÒµ½ bin Ä¿Â¼: {0}"
+            "zh" = "æœªæ‰¾åˆ° bin ç›®å½•: {0}"
             "en" = "bin directory not found: {0}"
         }
         "config_exists_cleaning" = @{
-            "zh" = "{0} ÅäÖÃÎÄ¼şÒÑ´æÔÚ£¬ÕıÔÚÇåÀí..."
+            "zh" = "{0} é…ç½®æ–‡ä»¶å·²å­˜åœ¨ï¼Œæ­£åœ¨æ¸…ç†..."
             "en" = "{0} configuration file already exists, cleaning..."
         }
         "key_exists_cleaning" = @{
-            "zh" = "keyÒÑ´æÔÚ£¬ÕıÔÚÇåÀí..."
+            "zh" = "keyå·²å­˜åœ¨ï¼Œæ­£åœ¨æ¸…ç†..."
             "en" = "Key already exists, cleaning..."
         }
         "activation_success" = @{
-            "zh" = "{0} ¼¤»î³É¹¦£¡"
+            "zh" = "{0} æ¿€æ´»æˆåŠŸï¼"
             "en" = "{0} activated successfully!"
         }
         "manual_activation_required" = @{
-            "zh" = "{0} ĞèÒªÊÖ¶¯ÊäÈë¼¤»îÂë£¡"
+            "zh" = "{0} éœ€è¦æ‰‹åŠ¨è¾“å…¥æ¿€æ´»ç ï¼"
             "en" = "{0} requires manual activation code entry!"
         }
         "download_failed" = @{
-            "zh" = "ÏÂÔØÊ§°Ü: {0}"
+            "zh" = "ä¸‹è½½å¤±è´¥: {0}"
             "en" = "Download failed: {0}"
         }
         "request_failed" = @{
-            "zh" = "{0} ÇëÇóÊ§°Ü: {1}"
+            "zh" = "{0} è¯·æ±‚å¤±è´¥: {1}"
             "en" = "{0} request failed: {1}"
         }
         "file_in_use" = @{
-            "zh" = "ÎÄ¼ş±»Õ¼ÓÃ£¬ÇëÏÈ¹Ø±ÕËùÓĞ JetBrains IDE ºóÔÙÊÔ£¡"
+            "zh" = "æ–‡ä»¶è¢«å ç”¨ï¼Œè¯·å…ˆå…³é—­æ‰€æœ‰ JetBrains IDE åå†è¯•ï¼"
             "en" = "File is in use, please close all JetBrains IDEs and try again!"
         }
         "processing_completed" = @{
-            "zh" = "`nËùÓĞÏî´¦ÀíÍê³É£¬ÈçĞè¼¤»îÂë£¬Çë·ÃÎÊÍøÕ¾»ñÈ¡£¡"
+            "zh" = "`næ‰€æœ‰é¡¹å¤„ç†å®Œæˆï¼Œå¦‚éœ€æ¿€æ´»ç ï¼Œè¯·è®¿é—®ç½‘ç«™è·å–ï¼"
             "en" = "`nAll items processed. If you need an activation code, please visit the website!"
         }
         "format_error" = @{
-            "zh" = "¸ñÊ½´íÎó£ºÇëÊ¹ÓÃ yyyy-MM-dd ¸ñÊ½"
+            "zh" = "æ ¼å¼é”™è¯¯ï¼šè¯·ä½¿ç”¨ yyyy-MM-dd æ ¼å¼"
             "en" = "Format error: Please use yyyy-MM-dd format"
         }
         "invalid_date" = @{
-            "zh" = "·Ç·¨ÈÕÆÚ£º{0}"
+            "zh" = "éæ³•æ—¥æœŸï¼š{0}"
             "en" = "Invalid date: {0}"
         }
         "reading_config" = @{
-            "zh" = "¶ÁÈ¡ÅäÖÃÎÄ¼ş£º{0}, Ñ°ÕÒ¼ü£º{1}"
+            "zh" = "è¯»å–é…ç½®æ–‡ä»¶ï¼š{0}, å¯»æ‰¾é”®ï¼š{1}"
             "en" = "Reading config file: {0}, looking for key: {1}"
         }
         "found_key" = @{
-            "zh" = "ÕÒµ½¼ü '{0}'£¬ÖµÎª '{1}'"
+            "zh" = "æ‰¾åˆ°é”® '{0}'ï¼Œå€¼ä¸º '{1}'"
             "en" = "Found key '{0}' with value '{1}'"
         }
         "failed_read_config" = @{
-            "zh" = "¶ÁÈ¡ÅäÖÃÎÄ¼şÊ§°Ü£º{0}"
+            "zh" = "è¯»å–é…ç½®æ–‡ä»¶å¤±è´¥ï¼š{0}"
             "en" = "Failed to read config file: {0}"
         }
         "cleaning_vmoptions" = @{
-            "zh" = "ÇåÀí VMOptions: {0}"
+            "zh" = "æ¸…ç† VMOptions: {0}"
             "en" = "Cleaning VMOptions: {0}"
         }
         "updating_vmoptions" = @{
-            "zh" = "¸üĞÂ VMOptions: {0}"
+            "zh" = "æ›´æ–° VMOptions: {0}"
             "en" = "Updating VMOptions: {0}"
         }
         "processing_disabled_plugins" = @{
-            "zh" = "ÒÑ´¦ÀíÎÄ¼ş: {0} ÖĞcom.intellij.modules.ultimateÏî"
+            "zh" = "å·²å¤„ç†æ–‡ä»¶: {0} ä¸­com.intellij.modules.ultimateé¡¹"
             "en" = "Processed file: {0} com.intellij.modules.ultimate item"
         }
         "file_not_exist_skip" = @{
-            "zh" = "ÎÄ¼ş²»´æÔÚ,Ìø¹ı: {0}"
+            "zh" = "æ–‡ä»¶ä¸å­˜åœ¨,è·³è¿‡: {0}"
             "en" = "File does not exist, skipping: {0}"
         }
         "error_processing_plugins" = @{
-            "zh" = "´¦Àí½ûÓÃ²å¼şÎÄ¼şÊ±³ö´í: {0}"
+            "zh" = "å¤„ç†ç¦ç”¨æ’ä»¶æ–‡ä»¶æ—¶å‡ºé”™: {0}"
             "en" = "Error processing disabled plugins file: {0}"
         }
         "processing_config" = @{
-            "zh" = "´¦ÀíÅäÖÃ: {0}, {1}, {2}"
+            "zh" = "å¤„ç†é…ç½®: {0}, {1}, {2}"
             "en" = "Processing config: {0}, {1}, {2}"
         }
         "requesting_key" = @{
-            "zh" = "ÇëÇókey: {0},ÇëÇóbody: {1},±£´æµØÖ·: {2}"
+            "zh" = "è¯·æ±‚key: {0},è¯·æ±‚body: {1},ä¿å­˜åœ°å€: {2}"
             "en" = "Requesting key: {0}, request body: {1}, save path: {2}"
         }
         "writing_key" = @{
-            "zh" = "Ğ´Èëkey,¼¤»îÖĞ: {0}"
+            "zh" = "å†™å…¥key,æ¿€æ´»ä¸­: {0}"
             "en" = "Writing key, activating: {0}"
         }
         "source_address" = @{
-            "zh" = "Ô´ ja-netfilter µØÖ·: https://gitee.com/ja-netfilter/ja-netfilter/releases/tag/2025.3.0"
+            "zh" = "æº ja-netfilter åœ°å€: https://gitee.com/ja-netfilter/ja-netfilter/releases/tag/2025.3.0"
             "en" = "Source ja-netfilter address: https://gitee.com/ja-netfilter/ja-netfilter/releases/tag/2025.3.0"
         }
         "source_privacy" = @{
-            "zh" = "Ô´ privacy.jar µØÖ·: https://gitea.998043.xyz/novice/plugin-privacy/releases/tag/release"
+            "zh" = "æº privacy.jar åœ°å€: https://gitea.998043.xyz/novice/plugin-privacy/releases/tag/release"
             "en" = "Source privacy.jar address: https://gitea.998043.xyz/novice/plugin-privacy/releases/tag/release"
         }
         "suggest_check_sha1" = @{
-            "zh" = "½¨ÒéºË¶Ô SHA1 ÖµÒÔÈ·±£ÍêÕûĞÔ"
+            "zh" = "å»ºè®®æ ¸å¯¹ SHA1 å€¼ä»¥ç¡®ä¿å®Œæ•´æ€§"
             "en" = "It is recommended to verify the SHA1 value to ensure integrity"
         }
         "configuring_ja_netfilter" = @{
-            "zh" = "ÅäÖÃja-netfilter£º"
+            "zh" = "é…ç½®ja-netfilterï¼š"
             "en" = "Configuring ja-netfilter:"
         }
         "custom_license_name" = @{
-            "zh" = "×Ô¶¨ÒåÊÚÈ¨Ãû³Æ(»Ø³µÄ¬ÈÏckey.run)"
+            "zh" = "è‡ªå®šä¹‰æˆæƒåç§°(å›è½¦é»˜è®¤ckey.run)"
             "en" = "Custom license name (Press Enter to use the default ckey.run)"
         }
         "custom_expiry_date" = @{
-            "zh" = "×Ô¶¨ÒåÊÚÈ¨µ½ÆÚÊ±¼ä(»Ø³µÄ¬ÈÏ2099-12-31)"
+            "zh" = "è‡ªå®šä¹‰æˆæƒåˆ°æœŸæ—¶é—´(å›è½¦é»˜è®¤2099-12-31)"
             "en" = "Custom expiration date (Press Enter to use the default 2099-12-31)"
         }
         "default_license_name" = @{
@@ -201,19 +201,19 @@ function Get-i18nString
             "en" = "2099-12-31"
         }
         "file_path_empty" = @{
-            "zh" = "ÎÄ¼şÂ·¾¶Îª¿Õ£¬Ìø¹ı´¦Àí:{0}"
+            "zh" = "æ–‡ä»¶è·¯å¾„ä¸ºç©ºï¼Œè·³è¿‡å¤„ç†:{0}"
             "en" = "File path is empty, skipping processing: {0}"
         }
         "found_home_file" = @{
-            "zh" = "ÕÒµ½.homeÎÄ¼ş: {0}"
+            "zh" = "æ‰¾åˆ°.homeæ–‡ä»¶: {0}"
             "en" = "Found .home file: {0}"
         }
         "read_home_content" = @{
-            "zh" = "¶ÁÈ¡.homeÎÄ¼şÄÚÈİ: {0}"
+            "zh" = "è¯»å–.homeæ–‡ä»¶å†…å®¹: {0}"
             "en" = "Read .home file content: {0}"
         }
         "found_bin_dir" = @{
-            "zh" = "ÕÒµ½binÄ¿Â¼: {0}"
+            "zh" = "æ‰¾åˆ°binç›®å½•: {0}"
             "en" = "Found bin directory: {0}"
         }
         "sha1_info" = @{
@@ -221,7 +221,7 @@ function Get-i18nString
             "en" = "{0} :SHA1: {1}"
         }
         "request_fail" = @{
-            "zh" = "ÇëÇóÊ§°Ü: {0}"
+            "zh" = "è¯·æ±‚å¤±è´¥: {0}"
             "en" = "Request failed: {0}"
         }
     }
@@ -238,7 +238,7 @@ function Get-i18nString
     return $key
 }
 
-# ÈÕÖ¾Êä³öº¯Êı
+# æ—¥å¿—è¾“å‡ºå‡½æ•°
 function Log
 {
     param(
@@ -297,7 +297,7 @@ function Debug([string]$message)
         }
         catch
         {
-            # Èç¹û¸ñÊ½»¯Ê§°Ü£¬Ôò±£³ÖÔ­ÏûÏ¢
+            # å¦‚æœæ ¼å¼åŒ–å¤±è´¥ï¼Œåˆ™ä¿æŒåŸæ¶ˆæ¯
         }
     }
     Log -message $message -level "DEBUG"
@@ -313,7 +313,7 @@ function Warning([string]$message)
         }
         catch
         {
-            # Èç¹û¸ñÊ½»¯Ê§°Ü£¬Ôò±£³ÖÔ­ÏûÏ¢
+            # å¦‚æœæ ¼å¼åŒ–å¤±è´¥ï¼Œåˆ™ä¿æŒåŸæ¶ˆæ¯
         }
     }
     Log -message $message -level "WARNING"
@@ -329,7 +329,7 @@ function Error([string]$message)
         }
         catch
         {
-            # Èç¹û¸ñÊ½»¯Ê§°Ü£¬Ôò±£³ÖÔ­ÏûÏ¢
+            # å¦‚æœæ ¼å¼åŒ–å¤±è´¥ï¼Œåˆ™ä¿æŒåŸæ¶ˆæ¯
         }
     }
     Log -message $message -level "ERROR"
@@ -345,20 +345,20 @@ function Success([string]$message)
         }
         catch
         {
-            # Èç¹û¸ñÊ½»¯Ê§°Ü£¬Ôò±£³ÖÔ­ÏûÏ¢
+            # å¦‚æœæ ¼å¼åŒ–å¤±è´¥ï¼Œåˆ™ä¿æŒåŸæ¶ˆæ¯
         }
     }
     Log -message $message -level "SUCCESS"
 }
 
-# ½áÊøÔËĞĞ
+# ç»“æŸè¿è¡Œ
 function Exit-Program
 {
     $null = Read-Host
     exit 1
 }
 
-# ½ø¶ÈÌõÏÔÊ¾
+# è¿›åº¦æ¡æ˜¾ç¤º
 function Write-ProgressCustom([string]$message, [string]$progress_bar, [double]$percent, [string]$color = "White")
 {
     $output = "{0} {1} {2}%" -f $message.PadRight(10), $progress_bar,$percent.ToString("F2")
@@ -367,7 +367,7 @@ function Write-ProgressCustom([string]$message, [string]$progress_bar, [double]$
     [Console]::ResetColor()
 }
 
-# ´´½¨ HttpClient ÊµÀı
+# åˆ›å»º HttpClient å®ä¾‹
 function Get-HttP_Client([int]$timeout_seconds = 30)
 {
     Add-Type -AssemblyName System.Net.Http
@@ -378,7 +378,7 @@ function Get-HttP_Client([int]$timeout_seconds = 30)
     $obj_http_client = New-Object System.Net.Http.HttpClient($handler)
     $obj_http_client.Timeout = [System.TimeSpan]::FromSeconds($timeout_seconds)
 
-    # ÉèÖÃ User-Agent
+    # è®¾ç½® User-Agent
     $os_version = [Environment]::OSVersion.Version.ToString()
     $powershell_ver = $PSVersionTable.PSVersion.ToString()
     $ua = "PowerShell/$powershell_ver (Windows NT $os_version)"
@@ -387,7 +387,7 @@ function Get-HttP_Client([int]$timeout_seconds = 30)
     return $obj_http_client
 }
 
-# ¶ÁÈ¡ÈÕÆÚÊäÈë
+# è¯»å–æ—¥æœŸè¾“å…¥
 function Read-Valid_Date([string]$prompt, [string]$default = "2099-12-31")
 {
     $date = ""
@@ -418,7 +418,7 @@ function Read-Valid_Date([string]$prompt, [string]$default = "2099-12-31")
     return $date
 }
 
-# ÏÔÊ¾ JetBrains ASCII Logo
+# æ˜¾ç¤º JetBrains ASCII Logo
 function Show-Ascii_Jetbrains
 {
     Write-Host @"
@@ -432,7 +432,7 @@ JJ JJ    EE           TT     BB    BB   RR   RR   AA  AA       II     NN    NNN 
 "@ -ForegroundColor Cyan
 }
 
-# »ñÈ¡ÊôĞÔÖµ£¨idea.properties£©
+# è·å–å±æ€§å€¼ï¼ˆidea.propertiesï¼‰
 function Get_Property_Value([string]$file_path, [string]$key_to_find)
 {
     $msg = Get-i18nString "reading_config"
@@ -470,7 +470,7 @@ function Get_Property_Value([string]$file_path, [string]$key_to_find)
     }
 }
 
-# ÇåÀí»·¾³±äÁ¿
+# æ¸…ç†ç¯å¢ƒå˜é‡
 function Remove_Env([string]$env_scope, [array]$products)
 {
     $msg = Get-i18nString "processing_env_vars"
@@ -492,7 +492,7 @@ function Remove_Env([string]$env_scope, [array]$products)
     }
 }
 
-# ´´½¨¹¤×÷Ä¿Â¼
+# åˆ›å»ºå·¥ä½œç›®å½•
 function Create_Work_Dir
 {
     try
@@ -512,7 +512,7 @@ function Create_Work_Dir
     }
 }
 
-# ÏÂÔØÎÄ¼ş
+# ä¸‹è½½æ–‡ä»¶
 function File_Download
 {
     $files = @(
@@ -578,7 +578,7 @@ function File_Download
     $obj_http_client.Dispose()
 }
 
-# ÇåÀí vmoptions ÎÄ¼ş
+# æ¸…ç† vmoptions æ–‡ä»¶
 function Revert_Vm_Options([string]$file_path)
 {
     $lines = Get-Content -Path $file_path -Encoding UTF8 -ErrorAction SilentlyContinue
@@ -590,7 +590,7 @@ function Revert_Vm_Options([string]$file_path)
     Debug ($msg -f $file_path)
 }
 
-# Ìí¼ÓÅäÖÃµ½ vmoptions ÎÄ¼ş
+# æ·»åŠ é…ç½®åˆ° vmoptions æ–‡ä»¶
 function Append_Vm_Options([string]$file_path)
 {
     if (Test-Path -Path $file_path)
@@ -601,10 +601,10 @@ function Append_Vm_Options([string]$file_path)
     }
 }
 
-# ¶ÁÈ¡ÎÄ¼ş£¬Èç¹ûÎÄ¼şÖĞÓĞcom.intellij.modules.ultimate£¬ÔòÇå¿ÕÕâĞĞ
+# è¯»å–æ–‡ä»¶ï¼Œå¦‚æœæ–‡ä»¶ä¸­æœ‰com.intellij.modules.ultimateï¼Œåˆ™æ¸…ç©ºè¿™è¡Œ
 function Process_Disabled_Plugins([string]$file_disabled_plugins)
 {
-    # ÑéÖ¤²ÎÊı
+    # éªŒè¯å‚æ•°
     if ( [string]::IsNullOrWhiteSpace($file_disabled_plugins))
     {
         $msg = Get-i18nString "file_path_empty"
@@ -612,7 +612,7 @@ function Process_Disabled_Plugins([string]$file_disabled_plugins)
         return
     }
 
-    # ¼ì²éÎÄ¼şÊÇ·ñ´æÔÚ
+    # æ£€æŸ¥æ–‡ä»¶æ˜¯å¦å­˜åœ¨
     if (-not (Test-Path -Path $file_disabled_plugins))
     {
         $msg = Get-i18nString "file_not_exist_skip"
@@ -622,13 +622,13 @@ function Process_Disabled_Plugins([string]$file_disabled_plugins)
 
     try
     {
-        # ¶ÁÈ¡ÎÄ¼şÄÚÈİ
+        # è¯»å–æ–‡ä»¶å†…å®¹
         $content = Get-Content -Path $file_disabled_plugins -Encoding UTF8 -ErrorAction Stop
 
-        # ¹ıÂËµô°üº¬ com.intellij.modules.ultimate µÄĞĞ
+        # è¿‡æ»¤æ‰åŒ…å« com.intellij.modules.ultimate çš„è¡Œ
         $filtered_content = $content | Where-Object { $_ -ne "com.intellij.modules.ultimate" }
 
-        # Èç¹ûÓĞ¹ıÂË²Ù×÷£¬ÔòĞ´»ØÎÄ¼ş
+        # å¦‚æœæœ‰è¿‡æ»¤æ“ä½œï¼Œåˆ™å†™å›æ–‡ä»¶
         if ($content.Count -ne $filtered_content.Count)
         {
             Set-Content -Path $file_disabled_plugins -Value $filtered_content -Encoding UTF8 -Force
@@ -643,7 +643,7 @@ function Process_Disabled_Plugins([string]$file_disabled_plugins)
     }
 }
 
-# ´´½¨¼¤»îÃÜÔ¿
+# åˆ›å»ºæ¿€æ´»å¯†é’¥
 function Create_Key([hashtable]$product, [string]$prd_full_name, [string]$custom_config_path)
 {
     $msg = Get-i18nString "processing_config"
@@ -721,12 +721,12 @@ function Create_Key([hashtable]$product, [string]$prd_full_name, [string]$custom
     }
 }
 
-# ´¦ÀíËùÓĞ JetBrains ²úÆ·
+# å¤„ç†æ‰€æœ‰ JetBrains äº§å“
 function Process_Vm_Options
 {
     Log (Get-i18nString "processing_configs")
 
-    #ÅĞ¶Ï$script:dir_local_jetbrainsÊÇ·ñ´æÔÚ
+    #åˆ¤æ–­$script:dir_local_jetbrainsæ˜¯å¦å­˜åœ¨
     if (!(Test-Path -Path $script:dir_local_jetbrains))
     {
         $msg = Get-i18nString "not_found_dir"
@@ -786,7 +786,7 @@ function Process_Vm_Options
     }
 }
 
-# ÊÇ·ñÊÇ JetBrains ²úÆ·
+# æ˜¯å¦æ˜¯ JetBrains äº§å“
 function Is_Product([string]$prd_dir_name)
 {
     foreach ($prd in $script:sPrds)
@@ -799,7 +799,7 @@ function Is_Product([string]$prd_dir_name)
     return $null
 }
 
-# »ñÈ¡ÓÃ»§ÊÚÈ¨ĞÅÏ¢
+# è·å–ç”¨æˆ·æˆæƒä¿¡æ¯
 function Read_Host_License_Info
 {
     $new_license_name = Read-Host -Prompt (Get-i18nString "custom_license_name")
@@ -817,7 +817,7 @@ function Read_Host_License_Info
     $script:license.expiryDate = $new_expiry
 }
 
-# Ö÷³ÌĞòÈë¿Ú
+# ä¸»ç¨‹åºå…¥å£
 function Main
 {
     Show-Ascii_Jetbrains
@@ -825,7 +825,7 @@ function Main
     Warning (Get-i18nString "script_date")
     Error (Get-i18nString "warning_msg")
 
-    # ÌáÈ¨¼ì²â
+    # ææƒæ£€æµ‹
     if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator"))
     {
         Warning (Get-i18nString "admin_request")
@@ -838,7 +838,7 @@ function Main
     Warning (Get-i18nString "close_products")
     $null = Read-Host
 
-    # ³õÊ¼»¯È«¾Ö±äÁ¿
+    # åˆå§‹åŒ–å…¨å±€å˜é‡
     $user_path = [Environment]::GetEnvironmentVariable("USERPROFILE")
     $public_path = [Environment]::GetEnvironmentVariable("PUBLIC")
     #$script:url_base = "http://127.0.0.1:10768"
@@ -853,16 +853,16 @@ function Main
     $script:dir_local_jetbrains = Join-Path -Path $user_path -ChildPath "AppData\Local\JetBrains\"
     $script:dir_roaming_jetbrains = Join-Path -Path $user_path -ChildPath "AppData\Roaming\JetBrains\"
 
-    # ÕıÔò±í´ïÊ½
+    # æ­£åˆ™è¡¨è¾¾å¼
     $pattern = '^-javaagent:.*[/\\]*\.jar.*'
     $script:regex = New-Object System.Text.RegularExpressions.Regex $pattern, ([System.Text.RegularExpressions.RegexOptions]::IgnoreCase -bor [System.Text.RegularExpressions.RegexOptions]::Compiled)
 
-    # ÅäÖÃÄÚÈİ
+    # é…ç½®å†…å®¹
     $script:content = @(
         "-javaagent:$($script:file_netfilter_jar.Replace("\", "/") )"
     )
 
-    # ²úÆ·ÁĞ±í
+    # äº§å“åˆ—è¡¨
     $script:sPrds = @(
         @{ name = "idea";     product_code = "II,PCWMP,PSI" }
         @{ name = "clion"; product_code = "CL,PSI,PCWMP" }
@@ -878,7 +878,7 @@ function Main
         @{ name = "rustrover"; product_code = "RR,PSI,PCWP" }
     )
 
-    # ÊÚÈ¨ĞÅÏ¢
+    # æˆæƒä¿¡æ¯
     $script:license = [PSCustomObject]@{
         assigneeName = ""
         expiryDate = "2099-12-31"
@@ -886,7 +886,7 @@ function Main
         productCode = ""
     }
 
-    # ¿ªÊ¼Ö´ĞĞÖ÷Á÷³Ì
+    # å¼€å§‹æ‰§è¡Œä¸»æµç¨‹
     Read_Host_License_Info
     Log (Get-i18nString "processing")
 
