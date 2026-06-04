@@ -82,7 +82,11 @@ def generate(table, dir) {
                     out.print "  ${it.annos}\n"
                 }
                 out.print "\n    /**\n"
-                out.print "     * ${it.comment}\n"
+                out.print "     * "
+                if(null != it.comment) {
+                    out.print it.comment}
+                }
+                out.print "\n"
                 out.print "     */\n"
                 out.print "    ${it.type} ${it.name};\n"
             }
