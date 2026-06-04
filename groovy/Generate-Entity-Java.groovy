@@ -84,7 +84,9 @@ def generate(table, dir) {
                 out.print "\n    /**\n"
                 out.print "     * "
                 if(null != it.comment) {
-                    out.print it.comment}
+                    out.print it.comment
+                } else {
+                    out.print it.name
                 }
                 out.print "\n"
                 out.print "     */\n"
